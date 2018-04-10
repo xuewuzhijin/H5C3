@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--
+    autoplay：自动播放   <audio src='' autoplay>
+    controls： 控制菜单   <audio src='' controls>
+    loop：   循环播放    <audio src='' loop>
+-->
+<!--<audio src="张学友%20-%20今晚要尽情%20(Live).mp3" controls ></audio>-->
+
+<!--兼容写法-->
+<audio controls>
+    <!--这种写法是不管哪个浏览器，只要支持这个格式的就播放-->
+    <source src="今晚要尽情.mp3">
+    <source src="今晚要尽情.ogg">
+    <source src="今晚要尽情.mav">
+    抱歉，你的浏览器不支持音频标签。
+    <!--如果以上格式都不支持，那么显示此文字-->
+</audio>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 500px;
+            height: 500px;
+            margin: 100px auto;
+            background: #0075ff;
+        }
+        .div{
+            /* 复杂版 */
+            /*border-top-left-radius: 250px 250px;*/
+            /*border-top-right-radius: 250px 250px;*/
+            /*border-bottom-left-radius: 250px 250px;*/
+            /*border-bottom-right-radius: 250px 250px;*/
+            /* 第一个值是水平半径(x),第二个值是垂直半径(y) */
+
+            /* 初级版 */
+            /*border-radius: 250px 250px 250px 250px / 250px 250px 250px 250px;*/
+            /* x/y */
+
+            /* 中级版 */
+            /*border-radius: 250px 250px 250px 250px;*/
+            /* 左上 右上 右下 左下 */
+
+            /* 高级版 */
+            /*border-radius: 250px/250px;*/
+            /* x/y */
+
+            /* 终极版 */
+            border-radius: 250px;
+        }
+    </style>
+</head>
+<body>
+<div class="div"></div>
+</body>
+</html>

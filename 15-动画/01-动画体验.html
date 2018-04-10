@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+        *   @keyframes name{
+        *       from{初始状态}
+        *       to{结束状态}
+        *   }
+        *
+        *
+        *
+        *   @keyframes name{
+        *   0%{}
+        *   25%{}
+        *   50%{}
+        *   75%{}
+        *   100%{}
+        *
+        *   调用上面动画
+        *   animation ： name 持续时间  执行次数  是否反向  运动曲线  延迟执行
+        *
+        */
+
+        div{
+            width: 300px;
+            height: 300px;
+            background: green;
+            animation: b 5s infinite alternate linear;
+        }
+        @keyframes a {
+            from {
+                transform: translateX(0) rotateZ(0deg);
+            }
+            to {
+                transform: translateX(500px) rotateZ(360deg);
+            }
+        }
+        @keyframes b{
+            0%{
+                transform: translateX(0);
+            }
+            25%{
+                transform: translateX(500px);
+                background: orange;
+                border-radius: 0;
+            }
+            50%{
+                transform:translateX(500px) translateY(300px);
+                background: #0075ff;
+                border-radius: 0;
+            }
+            75%{
+                transform: translateX(0) translateY(300px);
+                border-radius: 50%;
+            }
+            100%{
+                transform: translateY(0);
+                background: green;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="div"></div>
+</body>
+</html>

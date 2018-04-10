@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            display: flex;
+            margin: 100px auto;
+            background: #0075ff;
+            width: 800px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+        ul li{
+            list-style: none;
+            flex: 1;
+        }
+        .layout{
+            width: 800px;
+            height: 800px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .header{
+            flex: 1;
+            background: #0075ff;
+        }
+        .section{
+            flex: 5;
+            display: flex;
+            flex-direction: row;
+        }
+        .left{
+            flex: 1;
+            background: orangered;
+        }
+        .right{
+            flex: 5;
+            background: deepskyblue;
+        }
+        .footer{
+            background: green;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>我是第1个Li</li>
+    <li>我是第2个Li</li>
+    <li>我是第3个Li</li>
+    <li>我是第4个Li</li>
+    <li>我是第5个Li</li>
+</ul>
+<div class="layout">
+    <div class="header"></div>
+    <div class="section">
+        <div class="left"></div>
+        <div class="right">
+            <h1>布局详细</h1>
+            <p>给类名'layout'的DIV一个</br>display：flex；</br>flex-direction：column；</br></br>让子元素垂直布局，然后划分子元素占用父元素空间的比例如：</br>类名'header'和'footer'各占用1，类名'section'占用5</br></br>然后给类名'section'设一个横向布局，'left'占用比例1，'right'占用比例5，整体就完成了。</p>
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
+</body>
+</html>

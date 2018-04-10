@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 500px;
+            height: 500px;
+            margin: 100px auto;
+        }
+        .div{
+            background: #0075ff url("../../images/pingguo(200).jpg") no-repeat;
+            /*
+            *   控制大小方式  IE9及以上
+            *   background-size: 50% 50%;   自定义(图片可能会变形)
+            *   background-size: cover;     自适应高度(可能会损失一部分图片内容)
+            *   background-size: contain;   自适应宽度(可能会铺不满盒子)
+            *
+            *
+            */
+            /*background-size: 50% 50%;*/
+            background-size: cover;
+            /*background-size: contain;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+    </div>
+    <img src="../../images/pingguo(200).jpg" alt="">
+</body>
+</html>

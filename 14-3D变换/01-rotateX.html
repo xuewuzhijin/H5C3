@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 150px;
+            margin: 200px auto;
+            /*
+            *   透视：加给变换的父盒子
+            *   设置的是用户的眼睛距离，平面的距离
+            *   透视效果只是视觉上的呈现，并不是正真的3D
+            *   X轴的转动方向是往前转
+            */
+            perspective: 300px;
+        }
+        div img{
+            /* 谁用动画，给谁过渡，减少All的使用，all的原理会检测所有过渡的功能，降低电脑性能 */
+            transition: transform .6s;
+        }
+        div:hover img{
+            transform: rotateX(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+        <img src="../../images/pingguo(200).jpg" alt="">
+    </div>
+</body>
+</html>

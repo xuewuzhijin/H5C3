@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background: deepskyblue;
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            position: relative;
+            margin: 100px auto;
+        }
+        div:after,div:before{
+            content:'';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: url("../../images/zhengfan.png")no-repeat;
+            transition: transform 1s;
+            backface-visibility: hidden;
+        }
+        div:before{
+            background-position: top right;
+            transform: rotateY(-180deg);
+        }
+        div:after{
+            background-position: top left;
+        }
+        div:hover:after{
+            transform: rotateY(180deg);
+        }
+        div:hover:before{
+            transform: rotateY(0deg);
+        }
+
+        /*
+        *
+        *   原理：
+        *   开始的时候都是正面，我们要给其中一个设为反面(这个是鼠标移上去看的)
+        *   使用：backface-visibility：hidden；
+        *   意思就是当某一个属于背面的时候就隐藏，添加到使用的这个元素上而不是父盒子
+        *   需要注意的地方就是before以及after，后面的压前面
+        *
+        */
+    </style>
+</head>
+<body>
+    <div class="div"></div>
+</body>
+</html>

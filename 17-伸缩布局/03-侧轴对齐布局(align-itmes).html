@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h4{
+            color: red;
+        }
+        ul{
+            height: 500px;
+            border: 1px solid #000;
+            display: flex;
+        }
+        ul li{
+            width: 100px;
+            height: 100px;
+            background: #0075ff;
+            margin: 5px;
+            list-style: none;
+        }
+        section{
+            width: 1000px;
+            margin: 40px auto;
+            position: relative;
+        }
+        section span{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            right: 10px;
+            top: 0;
+        }
+        s{
+            text-decoration: none;
+            color: red;
+        }
+        section:nth-child(1) ul{
+            align-items: flex-start;
+        }
+        section:nth-child(2) ul{
+            align-items: flex-end;
+        }
+        section:nth-child(3) ul{
+            align-items: center;
+        }
+        section:nth-child(4) ul{
+            align-items: baseline;
+        }
+        section:nth-child(5) ul{
+            align-items: stretch;
+        }
+        section:nth-child(5) ul li{
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <h3>侧轴的对齐方式：align-itmes：flex-start</h3>
+    <span>1</span>
+    <h4>知识点：</h4>
+    <p>利用【align-itmes：flex-start;】让LI从侧轴方向对齐（上到下）</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</section>
+<section>
+    <h3>侧轴的对齐方式：align-itmes: flex-end</h3>
+    <span>2</span>
+    <h4>知识点：</h4>
+    <p>利用【align-itmes：flex-end;】让LI从侧轴方向对齐（下到上）</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</section>
+<section>
+    <h3>侧轴的对齐方式：align-itmes: center布局</h3>
+    <span>3</span>
+    <h4>知识点：</h4>
+    <p>利用【align-itmes：space-around;】让LI从侧轴中间对齐</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</section>
+<section>
+    <h3>侧轴的对齐方式：align-itmes: baseline布局</h3>
+    <span>4</span>
+    <h4>知识点：</h4>
+    <p>利用【align-itmes: baseline;】让LI从侧轴基线位置对齐</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</section>
+<section>
+    <h3>侧轴的对齐方式：align-itmes: stretch布局</h3>
+    <span>5</span>
+    <h4>知识点：</h4>
+    <p>利用【align-itmes: stretch;】让LI在主轴空间高度自适应，注意一点，LI的高度需设为auto</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</section>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 2px solid #000;
+            margin: 40px auto;
+            text-align: center;
+            font: bolder 55px/200px 'Microsoft YaHei';
+            box-sizing: border-box;
+        }
+        div:nth-child(1){
+            border-radius: 100px;
+        }
+        div:nth-child(2){
+            border-radius: 50%;
+        }
+        div:nth-child(3){
+            border-radius: 200px 0 0 0;
+        }
+        div:nth-child(4){
+            height: 100px;
+            line-height: 100px;
+            border-radius: 50%;
+        }
+        div:nth-child(5){
+            width: 100px;
+            border-radius: 50%;
+        }
+        div:nth-child(6){
+            border-radius: 50% 0;
+        }
+        div:nth-child(7){
+            border-radius: 50% 0 0 50%;
+        }
+        div:nth-child(8){
+            line-height: 100px;
+            width: 100px;
+            height: 100px;
+            /*   如需以下代码在IE5及以上生效，需把选择器换成类或ID   */
+            box-sizing: content-box;
+            border: 100px solid #0075ff;
+            border-top-color: orangered;
+            border-bottom-color: deepskyblue;
+            border-left-color: green;
+        }
+        div:nth-child(9){
+            line-height: 100px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            /*   如需以下代码在IE5及以上生效，需把选择器换成类或ID   */
+            box-sizing: content-box;
+            border: 100px solid #0075ff;
+            border-top-color: orangered;
+            border-bottom-color: deepskyblue;
+            border-left-color: green;
+        }
+        div:nth-child(10){
+            line-height: 0;
+            width: 0;
+            height: 0;
+            /*   如需以下代码在IE5及以上生效，需把选择器换成类或ID   */
+            box-sizing: content-box;
+            border: 100px solid #0075ff;
+            border-top-color: orangered;
+            border-bottom-color: deepskyblue;
+            border-left-color: green;
+        }
+        div:nth-child(11){
+            line-height: 100px;
+            width: 100px;
+            height: 100px;
+            /*   如需以下代码在IE5及以上生效，需把选择器换成类或ID   */
+            box-sizing: content-box;
+            border: 40px solid #0075ff;
+            border-right: none;
+            border-bottom-right-radius: 75px;
+        }
+        .heart{
+            width: 200px;
+            height: 300px;
+            border: none;
+            position: relative;
+            line-height: 100px;
+            z-index: 1;
+        }
+        .heart:before,.heart:after{
+            content: '12';
+            position: absolute;
+            width: 200px;
+            height: 300px;
+            border-radius: 100px 100px 0 0;
+            background: red;
+            top: -20px;
+        }
+        .heart:before{
+            left: -35px;
+            transform: rotate(-45deg);
+        }
+        .heart:after{
+            right: -35px;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+<div class="div">1</div>
+<div class="div">2</div>
+<div class="div">3</div>
+<div class="div">4</div>
+<div class="div">5</div>
+<div class="div">6</div>
+<div class="div">7</div>
+<div class="div">8</div>
+<div class="div">9</div>
+<div class="div">10</div>
+<div class="div">11</div>
+<div class="div heart">12</div>
+<div class="div">13</div>
+<div class="div">14</div>
+<div class="div">15</div>
+<div class="div">16</div>
+<div class="div">17</div>
+<div class="div">18</div>
+<div class="div">19</div>
+<div class="div">20</div>
+</body>
+</html>

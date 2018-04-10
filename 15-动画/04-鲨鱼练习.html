@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 509px;
+            height: 273px;
+            animation: boxmove 15s linear alternate infinite;
+        }
+        .div{
+            width: 509px;
+            height: 273px;
+            background: url("../../images/shark2.png") left top;
+            animation: move 2s steps(8) infinite;
+        }
+        @keyframes move{
+            0%{
+                background-position: left top;
+
+            }
+            100%{
+                background-position: left -2184px;
+            }
+        }
+        @keyframes boxmove{
+            0%{
+                transform: translateX(0) rotateZ(0deg);
+
+            }
+            50%{
+                transform: translateX(1300px) rotateZ(0deg);
+            }
+            75%{
+                transform: translateX(1300px) rotateZ(180deg);
+            }
+            100%{
+                transform: translateX(0) rotateZ(180deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="div"></div>
+    </div>
+</body>
+</html>

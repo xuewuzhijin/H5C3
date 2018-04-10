@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul{
+            width: 750px;
+            height: 40px;
+            margin: 200px auto;
+        }
+        ul li{
+            width: 150px;
+            height: 40px;
+            position: relative;
+            text-align: center;
+            float: left;
+            transform-style: preserve-3d;
+            transform-origin: left top;
+            /*transform: rotateX(30deg) rotateY(45deg);*/
+            transition: transform .7s;
+            cursor: pointer;
+        }
+        ul:hover li{
+            transform: rotateX(-90deg);
+        }
+        ul li:nth-child(2){
+            transition-delay: 0.2s;
+        }
+        ul li:nth-child(3){
+            transition-delay: 0.4s;
+        }
+        ul li:nth-child(4){
+            transition-delay: 0.6s;
+        }
+        ul li:nth-child(5){
+            transition-delay: 0.8s;
+        }
+        ul li span{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            line-height: 40px;
+        }
+        li span:nth-child(1){
+            background: red;
+        }
+        li span:nth-child(2){
+            background: orange;
+            transform-origin: top;
+            transform: rotateX(90deg);
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>
+        <span>我是第1个SPAN</span>
+        <span>我是第1个SPAN</span>
+    </li>
+    <li>
+        <span>我是第2个SPAN</span>
+        <span>我是第2个SPAN</span>
+    </li>
+    <li>
+        <span>我是第3个SPAN</span>
+        <span>我是第3个SPAN</span>
+    </li>
+    <li>
+        <span>我是第4个SPAN</span>
+        <span>我是第4个SPAN</span>
+    </li>
+    <li>
+        <span>我是第5个SPAN</span>
+        <span>我是第5个SPAN</span>
+    </li>
+</ul>
+</body>
+</html>

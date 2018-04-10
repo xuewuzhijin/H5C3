@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            /* translateZ必须配合perspective使用，否则无效 */
+            perspective: 600px;
+            /* 必须要放在被变换盒子的父盒子里或者父父...盒子里 */
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            background-color: green;
+            margin: 100px auto;
+            transition: transform .6s;
+            perspective: 600px;
+        }
+        div:hover{
+            transform: translateZ(150px);
+        }
+        .div{
+            width: 400px;
+            height: 400px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<div class="div"></div>
+</body>
+</html>

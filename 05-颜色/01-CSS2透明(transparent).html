@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .out{
+            width: 400px;
+            height: 400px;
+            background: transparent;
+            /* 完全透明 无法控制透明度 支持IE5以上 */
+            margin: 100px auto;
+            /* 有点奇葩，如果想让子盒子居中在父盒子中间，还需要一个border */
+            border: 1px solid #000;
+        }
+        .in{
+            width: 200px;
+            height: 200px;
+            background: orangered;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+<div class="out">
+    <div class="in"></div>
+</div>
+</body>
+</html>

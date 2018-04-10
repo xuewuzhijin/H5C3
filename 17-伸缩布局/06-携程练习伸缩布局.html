@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+        img{
+            display: block;
+            width: 100%;
+        }
+        .layout{
+            width: 100%;
+            height: 800px;
+            display: flex;
+            flex-direction: column;
+        }
+        .section{
+            flex: 1;
+        }
+        .footer{
+            flex: 1;
+        }
+        .item{
+            height: 90px;
+            display: flex;
+            margin: 3px 0;
+            border-radius: 10px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        .item:nth-child(1){
+            background: #ff697a;
+        }
+        .item:nth-child(2){
+            background: #3d98ff;
+        }
+        .item:nth-child(3){
+            background: #44c522;
+        }
+        .item:nth-child(4){
+            flex: 3;
+            background: #fc9720;
+        }
+        .item:nth-child(4) .right a{
+            width: 33.33%;
+        }
+        .left{
+            border-right: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            box-sizing: border-box;
+            flex: 1;
+            line-height: 45px;
+        }
+        .left i{
+            display: block;
+            width: 43px;
+            height: 43px;
+            margin: 0 auto;
+            background: url("../../images/xiechengicon.png") no-repeat;
+            background-size: 104px auto;
+        }
+        .item:nth-child(1) .left i{
+            background-position: 0 -125px;
+        }
+        .item:nth-child(2) .left i{
+            background-position: 0 -287px;
+        }
+        .item:nth-child(3) .left i{
+            background-position: 5px -234px;
+        }
+        .right{
+            flex: 2;
+        }
+        .right a{
+            display: block;
+            float: left;
+            width: 50%;
+            height: 45px;
+            line-height: 45px;
+            border-right: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            box-sizing: border-box;
+        }
+        .footer{
+            background: #0075ff;
+            background: linear-gradient(to bottom,#0075ff,deepskyblue);
+            border-radius: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            letter-spacing: 2px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="layout">
+    <div class="banner">
+        <a href=""><img src="../../images/xiecheng.jpg" alt=""></a>
+    </div>
+    <div class="section">
+        <div class="item">
+            <div class="left">
+                <a href="javascript:;">酒店</a>
+                <i></i>
+            </div>
+            <div class="right">
+                <a href="javascript:;">海外酒店</a>
+                <a href="javascript:;">团购</a>
+                <a href="javascript:;">特价酒店</a>
+                <a href="javascript:;">民宿·客栈</a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="left">
+                <a href="javascript:;">机票</a>
+                <i></i>
+            </div>
+            <div class="right">
+                <a href="javascript:;">火车票·抢票</a>
+                <a href="javascript:;">汽车票·船票</a>
+                <a href="javascript:;">特价机票</a>
+                <a href="javascript:;">专车·租车</a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="left">
+                <a href="javascript:;">旅游</a>
+                <i></i>
+            </div>
+            <div class="right">
+                <a href="javascript:;">目的地攻略</a>
+                <a href="javascript:;">邮轮旅行</a>
+                <a href="javascript:;">周边游</a>
+                <a href="javascript:;">定制旅行</a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="right">
+                <a href="javascript:;">景点·玩乐</a>
+                <a href="javascript:;">美食林</a>
+                <a href="javascript:;">购物·信用卡</a>
+                <a href="javascript:;">礼品卡</a>
+                <a href="javascript:;">WIFI·电话卡</a>
+                <a href="javascript:;">保险·签证</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h3>注意事项：</h3>
+        <p>1:</p>
+        <p>BANNER不需要进行分配，所以不需要给BANNER设flex，否则出现自适应高度会出现白底</p>
+        <p>2:</p>
+        <p>SECTION右侧不需要flex，直接给A链接宽度设50%，然后给FLOAT:LEFT</p>
+    </div>
+</div>
+</body>
+</html>

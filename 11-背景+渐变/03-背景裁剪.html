@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 500px;
+            height: 500px;
+            margin: 100px auto;
+            border: 30px solid #000;
+            padding: 30px;
+            background: url("../../images/pingguo(200).jpg") no-repeat;
+        }
+        .div{
+            background-origin: border-box;
+
+            /*
+            *   原理：     仅支持IE9及以上
+            *   如图片从borderbox的位置开始，那么裁剪的话是
+            *   border-box     保留border-box内的内容，外面的删除
+            *   padding-box     保留padding-box内的内容，外面的删除
+            *   content-box     保留content-box内的内容，外面的删除
+            *
+            */
+
+            /*background-clip: border-box;*/
+            background-clip: content-box;
+            /*background-clip: padding-box;*/
+
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+    </div>
+    <img src="../../images/pingguo(200).jpg" alt="">
+</body>
+</html>

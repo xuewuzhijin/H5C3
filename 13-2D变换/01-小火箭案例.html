@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,html{
+            height: 100%;
+            background: deepskyblue;
+            overflow: hidden;
+        }
+        img{
+            width: 100%;
+        }
+        .div{
+            width: 50px;
+            height: 68.27px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform: translate(-100px,100px) rotate(45deg);
+            transition: all .6s;
+        }
+        body:hover .div{
+            transform: translate(600px,-600px) rotate(45deg);
+        }
+        /*
+        *   旋转仅支持IE9及以上，过渡动画仅支持IE10及以上
+        */
+    </style>
+</head>
+<body>
+    <div class="div">
+        <img src="../../images/rocket.png" alt="rocket">
+    </div>
+</body>
+</html>

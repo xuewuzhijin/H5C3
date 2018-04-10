@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 300px;
+            height: 70px;
+            border-radius: 10px;
+            margin: 100px auto;
+            font: bolder 25px/70px 'Microsoft YaHei';
+            color: white;
+            text-align: center;
+            background: url("../../images/btnbg1.png") no-repeat left top,
+                        url("../../images/btnbg2.png") no-repeat left bottom,#0075ff;
+            transition: background-position 3s,letter-spacing .6s,text-shadow .3s;
+        }
+        div:hover{
+            background-position: left bottom,right top;
+            text-shadow: 3px 3px 5px #000;
+            letter-spacing: 3px;
+        }
+        /*
+        *   过渡效果仅支持IE10及以上
+        *   多背景图片仅支持IE9及以上
+        *
+        *
+        */
+    </style>
+</head>
+<body>
+    <div class="div">我是BUTTON按钮</div>
+</body>
+</html>

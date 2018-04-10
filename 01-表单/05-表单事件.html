@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form{
+            width: 100%;
+            max-width: 640px;
+            min-width: 320px;
+            font: bolder 18px/30px 'Microsoft Yahei';
+            margin: 0 auto;
+        }
+        input,meter,progress{
+            width: calc(100% - 20px);
+            height: 30px;
+            font: normal 18px/30px 'Microsoft Yahei';
+            display: block;
+            margin: 10px 0;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>表单事件</legend>
+            <label for="">
+                邮箱：<span id="tj"></span><input type="email" id="inp1">
+            </label>
+            <label for="">
+                密码：<input type="password" id="inp2">
+            </label>
+            <input type="submit" value="提交">
+        </fieldset>
+    </form>
+    <script>
+        //表单事件：
+        // oninput      当用户输入的时候
+        // oninvalid      当验证不通过的时候
+        var inp1 = document.getElementById('inp1'),
+            inp2 = document.getElementById('inp2'),
+            tj = document.getElementById('tj');
+            num = 0;
+
+        // oninput      当用户输入的时候
+        inp1.oninput = function(){
+            num++;
+            tj.innerText = num;
+            //BUG1,当input字数清空时，数值不会减少
+            //BUG2,当一次性写入两个以上字符的时候，增加的只是1
+        }
+
+        // oninvalid      当验证不通过的时候 --一般用于验证不通过时提示的文字
+        inp1.oninvalid = function(){
+            //验证不通过时提示的文字
+            this.setCustomValidity('会输入邮箱吗？');
+        }
+    </script>
+</body>
+</html>

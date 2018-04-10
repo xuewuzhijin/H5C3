@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div{
+            width: 500px;
+            height: 500px;
+            margin: 200px auto;
+            border: 1px solid #000;
+            background: #0075ff;
+            position: relative;
+            font: bolder 55px/500px 'Microsoft YaHei';
+            text-align: center;
+            transform-style: preserve-3d;
+            transition: all ease-in-out 1s;
+        }
+        .div:hover{
+            border: 1px dashed #000;
+            border-radius: 50%;
+            background: #0075ff30;
+            transform: rotateY(45deg) rotateX(-45deg);
+            animation: a 16s linear infinite;
+        }
+        .div>div{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+        }
+        .div:hover .top{
+            transform-origin: top;
+            transform: rotateX(90deg) translateY(-250px);
+            background: rgba(0,0,0,.2);
+        }
+        .div:hover .bottom{
+            transform-origin: bottom;
+            transform: rotateX(-90deg)  translateY(250px);
+            background: rgba(0,0,0,.4);
+        }
+        .div:hover .left{
+            transform-origin: left;
+            transform: rotateY(-90deg) translateX(-250px);
+            background: rgba(0,0,0,.6);
+        }
+        .div:hover .right{
+            transform-origin: right;
+            transform: rotateY(90deg)  translateX(250px);
+            background: rgba(0,0,0,.8);
+        }
+        .div:hover .forward{
+            transform: translateZ(250px);
+            background: rgba(0,90,0,.5);
+        }
+        .div:hover .back{
+            transform: translateZ(-250px);
+            background: rgba(90,0,0,.5);
+        }
+        @keyframes a{
+            0%{
+                transform: rotateY(0deg) rotateX(0deg);
+            }
+            100%{
+                transform: rotateY(360deg) rotateX(-360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="div">
+    <span>中心点</span>
+    <div class="top">上</div>
+    <div class="bottom">下</div>
+    <div class="left">左</div>
+    <div class="right">右</div>
+    <div class="forward">前</div>
+    <div class="back">后</div>
+</div>
+</body>
+</html>

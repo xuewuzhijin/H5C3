@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h4{
+            color: red;
+        }
+        ul{
+            border: 1px solid #000;
+        }
+        ul li{
+            width: 100px;
+            height: 100px;
+            background: #0075ff;
+            margin: 5px;
+            list-style: none;
+        }
+        section{
+            width: 1000px;
+            margin: 40px auto;
+            position: relative;
+        }
+        section span{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            right: 10px;
+            top: 0;
+        }
+        s{
+            text-decoration: none;
+            color: red;
+        }
+        section:nth-child(2) ul{
+            overflow: hidden;
+        }
+        section:nth-child(2) ul li{
+            float: left;
+        }
+        section:nth-child(3) ul{
+            display: flex;
+        }
+        section:nth-child(4) ul{
+            display: flex;
+            flex-direction: row;
+        }
+        section:nth-child(5) ul{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        section:nth-child(6) ul{
+            display: flex;
+            flex-direction: column;
+        }
+        section:nth-child(7) ul{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <h3>传统布局</h3>
+    <span>1</span>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</section>
+<section>
+    <h3>传统布局</h3>
+    <span>2</span>
+    <h4>知识点：</h4>
+    <p>利用【overflow：hidden】(添加给有浮动元素的父亲)给LI清除浮动，并让UL恢复原本高度</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</section>
+<section>
+    <h3>flex布局</h3>
+    <span>3</span>
+    <h4>知识点：</h4>
+    <p>利用【display：flex】(添加给UL)自动让LI水平排放</p>
+    <s><strong>默认效果：</strong>flex-direction: row</s>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</section>
+<section>
+    <h3>flex-direction：row布局</h3>
+    <span>4</span>
+    <h4>知识点：</h4>
+    <p>利用【flex-direction: row(默认效果)】(添加给UL)自动让LI水平排放，效果同3</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</section>
+<section>
+    <h3>flex-direction：row-reverse布局</h3>
+    <span>5</span>
+    <h4>知识点：</h4>
+    <p>利用【flex-direction: row-reverse】(添加给UL)自动让LI反转水平排放</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</section>
+<section>
+    <h3>flex-direction：column布局</h3>
+    <span>6</span>
+    <h4>知识点：</h4>
+    <p>利用【flex-direction: column】(添加给UL)自动让LI垂直排放</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</section>
+<section>
+    <h3>flex-direction：column-reverse布局</h3>
+    <span>7</span>
+    <h4>知识点：</h4>
+    <p>利用【flex-direction: column-reverse】(添加给UL)自动让LI反转垂直排放</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</section>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+        *   div>p   代表DIV里面所有的p标签
+        *   div+p   代表DIV后面相邻的p标签(DIV标签后面必须是P标签，否则没用)
+        *   div~p   代表DIV后面所有的兄弟P标签
+        *   以上选择器支持IE7及以上(IE6不知道)
+        */
+
+        div>p{
+            color: orangered;
+        }
+        div+p{
+            color: red;
+        }
+        div~p{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div>我是第1个div标签</div>
+<p>我是第1个p标签</p>
+<span>我是第1个span标签</span>
+<p>我是第2个p标签</p>
+<div>我是第2个div标签</div>
+<span>我是第2个span标签</span>
+<p>我是第3个p标签</p>
+<div>
+    <p>我是第1个p标签</p>
+    <p>我是第1个p标签</p>
+    <p>我是第1个p标签</p>
+</div>
+</body>
+</html>

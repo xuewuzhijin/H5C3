@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 500px;
+            height: 500px;
+            margin: 100px auto;
+            background: #0075ff;
+        }
+        .div{
+
+            border-image-source: url("../../images/border-img.png");
+
+            /*   边框图片裁剪 上 右 下 左    */
+            /*      盒子的4个角只保留图片的4个角，这四个角是20*20的宽高    */
+            border-image-slice: 20 20 20 20;
+
+            /*   设置图片的宽度   */
+            border-image-width: 20px;
+
+            /*   边框图片平铺   */
+            /*
+            *   repeat  ：正常平铺，但是可能会显示不完整
+            *   round   ：平铺，但是保证图片完整
+            *   stretch ：拉伸图片
+            *
+            *   注意：谷歌高版本的显示不出来 仅支持IE11
+            */
+            border-image-repeat: round;
+        }
+    </style>
+</head>
+<body>
+    <div class="div"></div>
+    <img src="../../images/border-img.png" alt="">
+</body>
+</html>

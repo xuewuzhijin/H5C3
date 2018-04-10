@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 300px;
+            height: 100px;
+            border: 1px solid #000;
+            margin: 20px auto;
+        }
+         /*div  带有class属性 */
+        div[class]{
+            background: #0075ff;
+        }
+         /*div  class属性要等于div1 */
+        div[class='div1']{
+            background: pink;
+        }
+         /*div  带有class属性，并且值以aa开头 */
+        div[class^='aa']{
+            background: gray;
+        }
+         /*div  带有class属性，并且值以bb结尾 */
+        div[class$='bb']{
+            background: orange;
+        }
+        /* div  带有class属性，并且值包含div */
+        div[class*='div']{
+            background: orangered;
+        }
+
+        /*
+        *   ^：开头
+        *   $：结尾
+        *   *：包含
+        *   支持IE7及以上
+        */
+    </style>
+</head>
+<body>
+<!--
+    属性选择器：  []  通过标签属性来选择
+    语法：
+    div[class]:   选中页面的div元素，并且div有class属性
+-->
+
+<div class="div1">1</div>
+<div class="div2">2</div>
+<div class="div3">3</div>
+<div class="aadiv1">我是DIV，我的类名是aadiv1</div>
+<div class="bbdiv2bb">我是DIV，我的类名是bbdiv2bb</div>
+<div class="aadiv3">我是DIV，我的类名是aadiv3</div>
+<div class="dddiv4bb">我是DIV，我的类名是dddiv4bb</div>
+<div class="bbdiv5">我是DIV，我的类名是bbdiv5</div>
+<div>6</div>
+<div>7</div>
+<div>8</div>
+<div>9</div>
+<div>10</div>
+
+</body>
+</html>

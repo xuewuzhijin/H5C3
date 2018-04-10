@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h4{
+            color: red;
+        }
+        ul{
+            border: 1px solid #000;
+            display: flex;
+        }
+        ul li{
+            width: 100px;
+            height: 100px;
+            background: #0075ff;
+            margin: 5px;
+            list-style: none;
+        }
+        section{
+            width: 1000px;
+            margin: 40px auto;
+            position: relative;
+        }
+        section span{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            right: 10px;
+            top: 0;
+        }
+        section:nth-child(1) ul{
+            justify-content: flex-start;
+        }
+        section:nth-child(2) ul{
+            justify-content: flex-end;
+        }
+        section:nth-child(3) ul{
+            justify-content: center;
+        }
+        section:nth-child(4) ul{
+            justify-content: space-around;
+        }
+        section:nth-child(5) ul{
+            justify-content: space-between;
+        }
+        section:nth-child(6) ul{
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <h3>主轴的对齐方式：justify-content：flex-start</h3>
+    <span>1</span>
+    <h4>知识点：</h4>
+    <p>利用【justify-content: flex-start;】让LI从主轴方向对齐（左到右）</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</section>
+<section>
+    <h3>主轴的对齐方式：justify-content: flex-end</h3>
+    <span>2</span>
+    <h4>知识点：</h4>
+    <p>利用【justify-content: flex-end;】让LI从主轴方向对齐（右到左）</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</section>
+<section>
+    <h3>主轴的对齐方式：justify-content: center布局</h3>
+    <span>3</span>
+    <h4>知识点：</h4>
+    <p>利用【justify-content: space-around;】让LI从主轴中间对齐</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</section>
+<section>
+    <h3>主轴的对齐方式：justify-content: space-around布局</h3>
+    <span>4</span>
+    <h4>知识点：</h4>
+    <p>利用【justify-content: center;】让LI从主轴中间平分</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</section>
+<section>
+    <h3>主轴的对齐方式：justify-content: space-between布局</h3>
+    <span>5</span>
+    <h4>知识点：</h4>
+    <p>利用【justify-content: space-between】让LI在主轴空间两端对齐中间平分</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</section>
+<section>
+    <h3>主轴的对齐方式：justify-content: evenly布局</h3>
+    <span>6</span>
+    <h4>知识点：</h4>
+    <p>利用【justify-content: evenly】让LI在主轴空间平均对齐</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</section>
+</body>
+</html>

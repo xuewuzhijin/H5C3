@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 500px;
+            height: 500px;
+            margin: 100px auto;
+            border: 30px solid #000;
+            padding: 30px;
+            background: url("../../images/pingguo(200).jpg") no-repeat;
+        }
+        .div{
+            /*   默认值  IE5以上 */
+            background-position: center ;
+            /*background-origin: padding-box;*/
+
+            /*   以下方式仅支持IE9及以上   */
+            /*   从border线条位置开始   */
+            /*background-origin: border-box;*/
+
+            /*   从content内容位置开始   */
+            /*background-origin: content-box;*/
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+    </div>
+    <img src="../../images/pingguo(200).jpg" alt="">
+</body>
+</html>

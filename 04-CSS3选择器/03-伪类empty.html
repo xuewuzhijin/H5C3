@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            margin: 10px;
+        }
+        /* 如果div是空的则会被选中 */
+        div:empty{
+            background: #0075ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">1</div>
+    <div class="div"></div>
+    <div class="div">3</div>
+    <div class="div"></div>
+</body>
+</html>

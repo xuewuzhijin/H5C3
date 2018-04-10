@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 400px;
+            height: 130px;
+            border: 1px solid #000;
+            margin: 10px auto;
+        }
+        .active{
+            border-radius: 50%;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+<div class="box box1 abc"></div>
+<div class="box box2"></div>
+<div class="box box3"></div>
+<div class="box box4"></div>
+<button>Cut</button>
+<button>Cut</button>
+<script>
+    var box1 = document.querySelector('.box1');
+    box1.classList.add('active');   //添加类名
+    box1.classList.remove('active');    //删除类名
+    console.log(box1.classList.contains('abc'));    //判断类名
+
+    var btn = document.querySelector('button');
+    btn.onclick = function(){
+        box1.classList.toggle('ccc');   //切换类名
+    }
+
+    //控制类名的API
+    // node.classList.add('');  //添加类名
+    // node.classList.remove('');   //删除类名
+    // node.classList.contains(''); //是否包含类名
+    // node.classList.toggle(); //切换类名
+</script>
+</body>
+</html>

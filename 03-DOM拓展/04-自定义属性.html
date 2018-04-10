@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+<!--给标签添加自定义属性，必须以data-开头-->
+<div class="div" data-content="我是一个DIV" data-name="DIV" data-my-name="date-my-name" title="盒子"></div>
+<script>
+    var div = document.querySelector('div');
+    // console.log(div.className);
+    // console.log(div.title);
+
+
+    //自定义属性需要通过dataset['']方式来获取;
+    console.log(div.dataset['name']);
+    console.log(div.dataset['content']);
+
+    //设置自定义属性的值
+    console.log(div.dataset['content'] = 'aaa');
+
+    //如何获取data-my-name
+    console.log(div.dataset['myName']);
+</script>
+</body>
+</html>

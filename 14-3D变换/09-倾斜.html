@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            background: #0075ff;
+            transition: transform 1s;
+            transform-origin: left;
+        }
+        div:hover{
+            transform: skew(0deg,30deg);
+            /* 第一个值是X轴，第二个值是Y轴 */
+        }
+
+        /*
+         *
+         *  转换原理：
+         *  X轴设30度
+         *  盒子的上面两个角变为负值，下面两个角变为正值
+         *
+         *  Y轴设30度
+         *  盒子的左边两个角变为负值，右边的两个角变为正值
+         *
+         *  设置原点的意思可以理解为，原点处于不动的状态
+         *
+         *                                 ！
+         *                                 ！
+         *                                 ！
+         *                 --------------------------------X
+         *                                 ！
+         *                                 ！
+         *                                 ！
+         *                                 Y
+         */
+    </style>
+</head>
+<body>
+   <div class="div"></div>
+</body>
+</html>

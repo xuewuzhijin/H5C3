@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul li{
+            list-style-type: none;
+        }
+        .wrap{
+            width: 500px;
+            height: 600px;
+            margin: 150px auto;
+        }
+        nav{
+            width: 100%;
+            height: 80px;
+            font: bolder 18px/80px 'Microsoft YaHei';
+            background: black;
+            box-shadow: 0px 0px 4px rgba(0,0,0,.3);
+        }
+        nav a{
+            display: block;
+            float: left;
+            text-decoration: none;
+            width: 100px;
+            text-align: center;
+            color: white;
+        }
+        .active{
+            background: #0075ff;
+        }
+        section{
+            width: 460px;
+            height: 480px;
+            padding: 20px;
+            color: black;
+            box-shadow: 0px 0px 4px rgba(0,0,0,.3);
+            display: none;
+        }
+        section ol li{
+            height: 70px;
+            font: normal 16px/70px 'Microsoft YaHei';
+            letter-spacing: 3px;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <nav>
+            <a href="javascript:;" data-cont="TAB1" class="">TAB1</a>
+            <a href="javascript:;" data-cont="TAB2" class="">TAB2</a>
+            <a href="javascript:;" data-cont="TAB3" class="">TAB3</a>
+            <a href="javascript:;" data-cont="TAB4" class="">TAB4</a>
+            <a href="javascript:;" data-cont="TAB5" class="">TAB5</a>
+        </nav>
+        <section class="cont" id="TAB1">
+            <ol>
+                <li>我是TAB1中的1</li>
+                <li>我是TAB1中的2</li>
+                <li>我是TAB1中的3</li>
+                <li>我是TAB1中的4</li>
+                <li>我是TAB1中的5</li>
+            </ol>
+        </section>
+        <section class="cont" id="TAB2">
+            <ol>
+                <li>我是TAB2中的1</li>
+                <li>我是TAB2中的2</li>
+                <li>我是TAB2中的3</li>
+                <li>我是TAB2中的4</li>
+                <li>我是TAB2中的5</li>
+            </ol>
+        </section>
+        <section class="cont" id="TAB3">
+            <ol>
+                <li>我是TAB3中的1</li>
+                <li>我是TAB3中的2</li>
+                <li>我是TAB3中的3</li>
+                <li>我是TAB3中的4</li>
+                <li>我是TAB3中的5</li>
+            </ol>
+        </section>
+        <section class="cont" id="TAB4">
+            <ol>
+                <li>我是TAB4中的1</li>
+                <li>我是TAB4中的2</li>
+                <li>我是TAB4中的3</li>
+                <li>我是TAB4中的4</li>
+                <li>我是TAB4中的5</li>
+            </ol>
+        </section>
+        <section class="cont" id="TAB5">
+            <ol>
+                <li>我是TAB5中的1</li>
+                <li>我是TAB5中的2</li>
+                <li>我是TAB5中的3</li>
+                <li>我是TAB5中的4</li>
+                <li>我是TAB5中的5</li>
+            </ol>
+        </section>
+    </div>
+    <script>
+        (function cut(key){
+            var active = document.querySelectorAll('nav a'),
+                activelength = active.length,
+                current = active[key].dataset['cont'],
+                section = document.querySelector('#'+current);
+            if(key >= 0){
+                active[key].classList.add('active');
+                section.style.display = 'block';
+            }
+
+            for(var i=0; i<activelength;i++){
+                active[i].onclick = function(){
+                    var preva = document.querySelector('.active'),
+                        prevs = preva.dataset['cont'];
+                    preva.classList.remove('active');
+                    document.querySelector('#'+prevs).style.display = 'none';
+                    this.classList.add('active');
+                    var acurrent = this.dataset['cont'];
+                    var sectioncurrent = document.querySelector('#'+acurrent).style.display = 'block';
+                }
+            }
+        })(0);
+    </script>
+</body>
+</html>

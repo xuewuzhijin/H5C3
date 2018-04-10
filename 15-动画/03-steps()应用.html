@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000;
+            margin: 200px auto;
+            border-radius: 50%;
+        }
+        .div{
+            width: 3px;
+            height: 200px;
+            background: #000;
+            margin: auto;
+            transform-origin: bottom;
+            animation: a 60s steps(60);
+        }
+        @keyframes a{
+            0%{
+                transform: rotate(0deg);
+        }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="div"></div>
+    </div>
+</body>
+</html>

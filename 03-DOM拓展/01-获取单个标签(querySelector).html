@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 400px;
+            height: 130px;
+            border: 1px solid #000;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+<div class="box box1" id="box1"></div>
+<div class="box box2"></div>
+<div class="box box3"></div>
+<div class="box box4"></div>
+<script>
+    //获取单个（第一个）元素
+    var box1 = document.querySelector('.box');
+    //可以是ID可以是class也可以是标签名，如有很多个符合条件，那么只选第一个
+
+    box1.style.background = 'red';
+</script>
+</body>
+</html>

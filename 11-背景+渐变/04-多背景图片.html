@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 150px;
+            margin: 100px auto;
+            border: 1px solid #000;
+        }
+        .div{
+            /*   仅支持IE9及以上   */
+            /*   技能1：可以在一个盒子上边用一个背景，最下边用一个背景，中间用颜色填充，无论怎么拉伸盒子宽高，都保持不变   */
+            background: url("../../images/1.png")no-repeat left top,
+                        url("../../images/2.png")no-repeat right top,
+                        url("../../images/3.png")no-repeat left bottom,
+                        url("../../images/4.png")no-repeat right bottom;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+
+    </div>
+</body>
+</html>

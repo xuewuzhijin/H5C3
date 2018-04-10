@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form{
+            width: 100%;
+            max-width: 640px;
+            min-width: 320px;
+            font: bolder 18px/30px 'Microsoft Yahei';
+            margin: 0 auto;
+        }
+        input,meter,progress{
+            width: 100%;
+            height: 30px;
+            font: normal 18px/30px 'Microsoft Yahei';
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>表单元素</legend>
+
+            <label for="">
+                用户名：<input type="text" name="userName">
+            </label>
+
+            <label for="">
+                密码：<input type="password" name="pwd" id="">
+            </label>
+
+            <label for="">
+                性别：<input type="text" name="sex" list="sex">
+            </label>
+
+            <datalist id="sex">
+                <!--这里要是想要显示文本，要么value去掉，要么值不能为空-->
+                <option value="男">男</option>
+                <option value="女">女</option>
+                <option value="不详">不详</option>
+            </datalist>
+
+            <label for="">
+                <!--<outpt>仅向外展示的数据-->
+                推荐人：<outpt>标哥</outpt>
+            </label>
+            <br><br>
+
+            <label for="">
+                加密类型:<keygen/>
+            </label>
+            <br><br>
+
+            <label for="">
+                <!--低于30高于80颜色发生变化-->
+                度量器：<meter value="60" max="100" min="0" low="30" high="80"></meter>
+            </label>
+
+            <label for="">
+            <!--<progress>进度条 不填写value这些值自己滚动-->
+            <progress value="40" max="100" min="0"></progress>
+            </label>
+
+        <input type="submit" value="提交">
+        </fieldset>
+    </form>
+</body>
+</html>

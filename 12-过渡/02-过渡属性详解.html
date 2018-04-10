@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 20px auto;
+            background: orangered;
+            /*   仅支持IE10及以上   */
+            /*   根据不同属性设定不同时间的过渡过程   */
+            /*transition: width .6s,background-color .6s;*/
+
+            /*   如果所有属性特性一样，那么使用简写   */
+            /*transition: all .6s;*/
+
+            /*   功能:    linear 1s:代表延迟一秒钟执行   */
+            transition: all .6s linear 1s;
+        }
+        div:nth-child(1):hover{
+            width: 100%;
+            background: #0075ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="div"></div>
+    <div class="div"></div>
+    <div class="div"></div>
+    <div class="div"></div>
+    <div class="div"></div>
+</body>
+</html>

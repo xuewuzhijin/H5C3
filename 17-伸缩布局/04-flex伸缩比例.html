@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h4{
+            color: red;
+        }
+        ul{
+            height: 500px;
+            border: 1px solid #000;
+            display: flex;
+        }
+        ul li{
+            width: 100px;
+            height: 100px;
+            background: #0075ff;
+            margin: 5px;
+            list-style: none;
+        }
+        section{
+            width: 100%;
+            margin: 40px auto;
+            position: relative;
+        }
+        section span{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            right: 10px;
+            top: 0;
+        }
+        s{
+            text-decoration: none;
+            color: red;
+        }
+        section:nth-child(1) ul li:nth-child(1){
+            flex: 1;
+        }
+        section:nth-child(1) ul li:nth-child(2){
+            flex: 1;
+        }
+        section:nth-child(1) ul li:nth-child(3){
+            flex: 1;
+        }
+        section:nth-child(2) ul li:nth-child(1){
+            flex: 1;
+        }
+        section:nth-child(2) ul li:nth-child(2){
+            flex: 2;
+        }
+        section:nth-child(2) ul li:nth-child(3){
+            flex: 1;
+        }
+        section:nth-child(3) ul li:nth-child(1){
+            flex: 1;
+        }
+        section:nth-child(3) ul li:nth-child(2){
+            flex: 8;
+        }
+        section:nth-child(3) ul li:nth-child(3){
+            flex: 1;
+        }
+        section:nth-child(4) ul li:nth-child(1){
+
+        }
+        section:nth-child(4) ul li:nth-child(2){
+            flex: 4;
+        }
+        section:nth-child(4) ul li:nth-child(3){
+            flex: 2;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <h3>比例1:1:1</h3>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</section>
+<section>
+    <h3>比例1:2:1</h3>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</section>
+<section>
+    <h3>比例1:8:1</h3>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</section>
+<section>
+    <h3>比例不参与:4:2</h3>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</section>
+</body>
+</html>

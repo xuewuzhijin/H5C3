@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 780px;
+            height: 50px;
+            line-height: 50px;
+            margin: 200px auto;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .div ul:before,.div ul:after{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: #0075ff;
+            content: '';
+        }
+        .div ul:before{
+            left: -50px;
+        }
+        .div ul:after{
+            right: -50px;
+        }
+        ul li{
+            float: left;
+            list-style-type: none;
+            width: 130px;
+            height: 50px;
+        }
+        .center{
+            width: 100px;
+            height: 50px;
+        }
+        .left,.right{
+            width: 15px;
+            height: 50px;
+        }
+        .left{
+            transform-origin: left bottom;
+        }
+        .right{
+            transform-origin: right bottom;
+        }
+        ul li span{
+            display: block;
+            float: left;
+            background: #0075ff;
+            transition: all .2s linear;
+            cursor: pointer;
+        }
+        ul li:hover .left{
+            transform: skew(0deg,-30deg);
+            background: #0266dc;
+        }
+        ul li:hover .right{
+            transform: skew(0deg,30deg);
+            background: #0266dc;
+        }
+        ul li:hover .center{
+            transform: translateY(-8.5px);
+            text-shadow: 0 4px 1px black;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+        <ul>
+            <li>
+                <span class="left"></span>
+                <span class="center">我是LI标签</span>
+                <span class="right"></span>
+            </li>
+            <li>
+                <span class="left"></span>
+                <span class="center">我是LI标签</span>
+                <span class="right"></span>
+            </li>
+            <li>
+                <span class="left"></span>
+                <span class="center">我是LI标签</span>
+                <span class="right"></span>
+            </li>
+            <li>
+                <span class="left"></span>
+                <span class="center">我是LI标签</span>
+                <span class="right"></span>
+            </li>
+            <li>
+                <span class="left"></span>
+                <span class="center">我是LI标签</span>
+                <span class="right"></span>
+            </li>
+            <li>
+                <span class="left"></span>
+                <span class="center">我是LI标签</span>
+                <span class="right"></span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
